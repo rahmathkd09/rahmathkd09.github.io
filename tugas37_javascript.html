@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 37 DOM</title>
+</head>
+<body>
+    
+    <button type="button" onclick="Tombol()" name="button">Jalankan</button>
+    <br />
+    <br />
+    <hr />
+    Atribut <b>getNamedItem()</b> :
+    <p id="p1">contoh p</p>
+    <hr />
+    Atribut <b>name()</b> :
+    <p id="p2">contoh p</p>
+    <hr />
+    Atribut <b>length()</b> :
+    <p id="p3">contoh a</p>
+    <hr />
+    <script type="text/javascript">
+            function Tombol(){
+                    var a = document.getElementsByTagName("button")[0];
+                    var x = a.attributes.getNamedItem("onclick").value;
+                    document.getElementById("p1").innerHTML = x;
+                    var y = a.attributes.item(0).name;
+                    document.getElementById("p2").innerHTML = y;
+                    var z = a.attributes.length;
+                    document.getElementById("p3").innerHTML = z;
+            }     
+            </script>
+        
+
+</body>
+</html>

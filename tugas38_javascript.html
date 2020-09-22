@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 38 DOM</title>
+</head>
+<body>
+    <button type="button" onclick="klik()" name="button">Jalankan</button>
+	<br />
+	<br />
+	<hr />
+	Atribut <b>removeNamedItem()</b> : <br />
+	<input id="inputID" value="Inputan"/> <br />
+	<hr />
+	Atribut <b>setNamedItem()</b> : <br />
+	<i id="i">contoh</i>
+	<hr />
+	Atribut <b>value()</b> :
+	<p id="p1">contoh</p>
+	<hr />
+
+	<script type="text/javascript">
+		function klik(){
+			
+       var a=document.getElementsByTagName("input")[0];
+        var x=a.attributes.removeNamedItem("value")
+
+    
+    var b = document.getElementsByTagName("i")[0]
+                var y = document.createAttribute("style")
+                y.value = "color: red"
+                b.attributes.setNamedItem(y)
+                var c = document.getElementsByTagName("button")[0]
+                var z = c.attributes.getNamedItem("name").value
+                document.getElementById("p1").innerHTML = z
+     
+        
+        
+        }
+        
+
+
+
+	</script> 
+</body>
+</html>
